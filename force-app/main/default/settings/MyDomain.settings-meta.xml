@@ -3,12 +3,8 @@
     <canOnlyLoginWithMyDomainUrl>false</canOnlyLoginWithMyDomainUrl>
     <doesApiLoginRequireOrgDomain>false</doesApiLoginRequireOrgDomain>
     <domainPartition>trailblaze</domainPartition>
-    <enableEdgeDuringRollout>true</enableEdgeDuringRollout>
     <enableNativeBrowserForAuthOnAndroid>false</enableNativeBrowserForAuthOnAndroid>
     <enableNativeBrowserForAuthOnIos>false</enableNativeBrowserForAuthOnIos>
-    <enableShareBrowserSessionAndroidForAuth>false</enableShareBrowserSessionAndroidForAuth>
-    <enableShareBrowserSessionIOSForAuth>false</enableShareBrowserSessionIOSForAuth>
-    <logRedirections>false</logRedirections>
     <myDomainName>resourceful-shark-8f91vt-dev-ed</myDomainName>
     <myDomainSuffix>MySalesforce</myDomainSuffix>
     <redirectForceComSiteUrls>true</redirectForceComSiteUrls>
