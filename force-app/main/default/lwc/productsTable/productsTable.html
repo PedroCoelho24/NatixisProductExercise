@@ -1,0 +1,58 @@
+<template>
+    <template lwc:if={errorCheck}>
+        <h2>{error}</h2>
+    </template>
+    <template lwc:else>
+        <lightning-card> 
+            <h1 slot="title" class="no-wrap">Product Table</h1>
+            <template lwc:if={tableLoading}>
+                <div class="exampleHolder">
+                    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                </div>
+            </template>
+            <template lwc:else>
+                <lightning-layout horizontal-align="left" vertical-align="end">
+                    <lightning-combobox name="title"
+                    value={selectedTitle}
+                    placeholder="Select Title"
+                    options={filterTitle} onchange={handleFilterChange}></lightning-combobox>
+                    
+                    <lightning-combobox
+                    name="brand"
+                    value={selectedBrand}
+                    placeholder="Select Brand"
+                    options={filterBrand} onchange={handleFilterChange}></lightning-combobox>
+                    
+                    <lightning-combobox
+                    name="category"
+                    value={selectedCategory}
+                    placeholder="Select Category"
+                    options={filterCategory} onchange={handleFilterChange}></lightning-combobox>
+
+                    <lightning-button variant="brand" label="Search"  onclick={handleSearch} class="slds-var-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="Refresh Page"  onclick={handleRefresh} class="slds-var-m-left_x-small"></lightning-button>
+
+
+                </lightning-layout> 
+                <template lwc:if={emptyTable}>
+                    <h2>TABLE EMPTY</h2>
+                </template>
+                <template lwc:else>
+                    <c-custom-data-table
+                        class="slds-table_col-bordered"
+                        key-field="id"
+                        data={products}
+                        columns={columns}
+                        hide-checkbox-column="true">
+                    </c-custom-data-table>
+                </template>
+            </template>
+
+
+            <p>Selected value is: {selectedTitle}</p>
+            <p>Selected value is: {selectedBrand}</p>
+            <p>Selected value is: {selectedCategory}</p>
+            
+        </lightning-card>
+    </template>
+</template>
