@@ -1,0 +1,19 @@
+<apex:page sidebar="false" showHeader="false">
+    <apex:includeLightning />
+    <div id="lightning" />
+    <script>
+        $Lightning.use("c:ProductsTableApp", function() {
+          $Lightning.createComponent(
+              "c:productsTable",
+              {},
+              "lightning",
+              function(cmp) {
+                console.log("Component is created!");
+              }
+          );
+        });
+    </script>
+    <style type="text/css">
+      #lightning { margin: 50px; }
+  </style>
+</apex:page>
