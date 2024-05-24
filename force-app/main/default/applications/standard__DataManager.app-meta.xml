@@ -7,8 +7,6 @@
     <label>Data Manager</label>
     <navType>Standard</navType>
     <tabs>standard-AnalyticsDataManager</tabs>
-    <tabs>Object_A__c</tabs>
-    <tabs>Object_B__c</tabs>
-    <tabs>Object_C__c</tabs>
+    <tabs>Dummy_Product__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

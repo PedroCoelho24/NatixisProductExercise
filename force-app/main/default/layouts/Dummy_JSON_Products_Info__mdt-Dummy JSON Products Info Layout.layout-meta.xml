@@ -16,11 +16,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Endpoint__c</field>
+                <field>Method__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Method__c</field>
+                <field>Endpoint__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

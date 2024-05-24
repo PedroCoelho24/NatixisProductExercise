@@ -7,8 +7,6 @@
     <label>LightningInstrumentation</label>
     <navType>Standard</navType>
     <tabs>standard-LightningInstrumentation</tabs>
-    <tabs>Object_A__c</tabs>
-    <tabs>Object_B__c</tabs>
-    <tabs>Object_C__c</tabs>
+    <tabs>Dummy_Product__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

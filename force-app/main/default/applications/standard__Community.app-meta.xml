@@ -12,7 +12,5 @@
     <tabs>standard-IdeaTheme</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
-    <tabs>Object_A__c</tabs>
-    <tabs>Object_B__c</tabs>
-    <tabs>Object_C__c</tabs>
+    <tabs>Dummy_Product__c</tabs>
 </CustomApplication>

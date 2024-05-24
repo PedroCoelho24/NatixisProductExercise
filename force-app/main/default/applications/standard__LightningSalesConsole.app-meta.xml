@@ -20,20 +20,12 @@
     <tabs>standard-Feed</tabs>
     <tabs>standard-CollaborationGroup</tabs>
     <tabs>standard-File</tabs>
-    <tabs>Object_A__c</tabs>
-    <tabs>Object_B__c</tabs>
-    <tabs>Object_C__c</tabs>
+    <tabs>Dummy_Product__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningSalesConsole_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
-            <tab>Object_A__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Object_B__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Object_C__c</tab>
+            <tab>Dummy_Product__c</tab>
         </mappings>
         <mappings>
             <tab>standard-Account</tab>

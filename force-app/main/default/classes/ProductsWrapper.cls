@@ -1,22 +1,37 @@
 public class ProductsWrapper {
     
-    List<IndividualProductWrapper> products;
-    Integer total;
-    Integer skip;
-    Integer limit_x;
+    @AuraEnabled
+    public List<IndividualProductWrapper> products;
+    @AuraEnabled
+    public Integer total;
+    @AuraEnabled
+    public Integer skip;
+    @AuraEnabled
+    public Integer limit_x;
     
     
     public class IndividualProductWrapper {
+        @AuraEnabled
         public String id;
+        @AuraEnabled
         public String title;
+        @AuraEnabled
         public String description;
-        public String price;
+        @AuraEnabled
+        public Decimal price;
+        @AuraEnabled
         public String discountPercentage;
-        public String rating;
-        public String stock;
+        @AuraEnabled
+        public Decimal rating;
+        @AuraEnabled
+        public Integer stock;
+        @AuraEnabled
         public String brand;
+        @AuraEnabled
         public String category;
+        @AuraEnabled
         public String thumbnail;
+        @AuraEnabled
         public List<String> images;
     }
     

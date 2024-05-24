@@ -6,7 +6,5 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <tabs>standard-AppLauncher</tabs>
-    <tabs>Object_A__c</tabs>
-    <tabs>Object_B__c</tabs>
-    <tabs>Object_C__c</tabs>
+    <tabs>Dummy_Product__c</tabs>
 </CustomApplication>

@@ -4,7 +4,7 @@
     <protected>false</protected>
     <values>
         <field>Endpoint__c</field>
-        <value xsi:type="xsd:string">https://dummyjson.com/products</value>
+        <value xsi:type="xsd:string">https://dummyjson.com/products?sortBy=category&amp;order=asc&amp;limit=0</value>
     </values>
     <values>
         <field>Method__c</field>
