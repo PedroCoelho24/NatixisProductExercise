@@ -5,9 +5,7 @@
     <enableContactAndEventSync>false</enableContactAndEventSync>
     <enableEmailTrackingInMobile>true</enableEmailTrackingInMobile>
     <enableEngageForOutlook>false</enableEngageForOutlook>
-    <enableExtensionHostUnrestricted>false</enableExtensionHostUnrestricted>
     <enableGmailIntegration>true</enableGmailIntegration>
-    <enableInboxInternalEmailTracking>false</enableInboxInternalEmailTracking>
     <enableInboxMobileIntune>false</enableInboxMobileIntune>
     <enableOutlookIntegration>false</enableOutlookIntegration>
     <enableProductivityFeatures>false</enableProductivityFeatures>
