@@ -1,8 +1,10 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement, track, wire } from 'lwc';
 import getProducts from '@salesforce/apex/ProductTableController.doCallout';
-import getMetadataInfo from '@salesforce/apex/ProductTableController.doCallout';
+import { getRecord } from 'lightning/uiRecordApi';
 
-import { RefreshEvent } from "lightning/refresh";
+const FIELDS = [
+	'Max_Price_To_Show__mdt.Max_Value__c',
+  ];
 
 
 const columns = [
@@ -42,22 +44,22 @@ export default class ProductsTable extends LightningElement {
 	@track selectedBrand = "";
 	@track selectedCategory = "";
 	
-
+	@wire(getRecord, { recordId: 'm027R000000otOlQAI', fields: FIELDS })
+  metaDataRecord;
 	connectedCallback() {
+
+		
 		
 		getProducts()
 		.then((result) => {
 			this.totalProducts = result;
-			console.log('test');
-			console.log(this.totalProducts);
 			let tempProducts = []; 
 			for (let key in this.totalProducts) {
 				let maxPriceValue = 0;
 				let maxProductValue = 0;
 				
 				for (let prod in this.totalProducts[key]) {
-					console.log(this.totalProducts[key][prod].price);
-					if(maxProductValue + 1 <= 100 && maxPriceValue + this.totalProducts[key][prod].price < 10000) {
+					if(maxProductValue + 1 <= 100 && maxPriceValue + this.totalProducts[key][prod].price < this.metaDataRecord.data.fields.Max_Value__c.value) {
 						tempProducts.push(this.totalProducts[key][prod]);
 						maxProductValue = maxProductValue + 1;
 						maxPriceValue = maxPriceValue + this.totalProducts[key][prod].price;
@@ -101,7 +103,6 @@ export default class ProductsTable extends LightningElement {
 	}
 
 	handleFilterChange(event) {
-		console.log('handleFilterChange');
 		const field = event.target.name;
 		const value = event.target.value;
 		let tempList = [];
@@ -131,7 +132,6 @@ export default class ProductsTable extends LightningElement {
 		}
 			
 		
-		console.log(tempList);
 		const titles = new Set();
 		const brands = new Set();
 		const categories = new Set();
@@ -145,7 +145,6 @@ export default class ProductsTable extends LightningElement {
 		this.filterTitle = [...titles].map(title => ({ label: title, value: title }));
 		this.filterBrand = [...brands].map(brand => ({ label: brand, value: brand }));
 		this.filterCategory = [...categories].map(category => ({ label: category, value: category }));
-		console.log(this.products);
 		
 		this.products = tempList;
 		
@@ -162,7 +161,6 @@ export default class ProductsTable extends LightningElement {
 	}
 
 	handleRefresh() {
-		console.log('refresh');
 		this.resetVariables();
 		this.connectedCallback();
 	}
